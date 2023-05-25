@@ -25,6 +25,32 @@ body {
     background-image: url(../src/img/banner3.jpg);
 }
 
+/*Sacar borde y brillo azul de bootstrap*/
+
+input:focus,  input.form-control:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+textarea:focus, textarea.form-control:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+a.btn:focus{
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
 .heading {
     color         : var(--ligth);
     font-size     : 2.3rem;
@@ -191,6 +217,67 @@ p {
     text-align: center;
     margin: 3rem 0;
 }
+
+
+/*CONTACTO*/
+
+.contact{
+    margin-bottom: 3rem;
+}
+
+form{
+    background-image: url(../src/img/banner2.jpg);
+    background-size: cover;
+    padding: 3rem;
+}
+
+#contacts input{
+    background: var(--black);
+    color: var(--ligth);
+    border-color: var(--ligth);
+    margin-bottom: .5rem;
+}
+
+#contacts input::placeholder{
+    font-size: .7rem;
+}
+
+#contacts textarea{
+    background: var(--black);
+    color: var(--ligth);
+    border-color: var(--ligth);
+    margin-bottom: .5rem;
+}
+
+#contacts textarea::placeholder{
+    font-size: .7rem;
+}
+
+#message-btn{
+    text-align: center;
+}
+
+#message-btn button{
+width: 10rem;
+height: 2rem;
+font-size: .9rem;
+letter-spacing: 3px;
+border-radius: .3rem;
+background: var(--black);
+color: var(--ligth);
+transition: all .5s ease-in-out;
+}
+
+#message-btn button:hover{
+    background: var(--ligth);
+    color: var(--black);
+}
+
+
+/*FOOTER*/
+
+
+
 
 
 
