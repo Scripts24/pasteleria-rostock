@@ -14,20 +14,33 @@
 :root {
     --prymary  : #260801;
     --secondary: #72652b;
+    --bg-one   : #261514;
     --dark     : #3d3d21;
     --ligth    : #BFA380;
     --white    : #ffffffe0;
     --black    : #0a0a0a;
 }
 
+body {
+    background-image: url(../src/img/banner3.jpg);
+}
+
+.heading{
+    color: var(--ligth);
+    font-size: 2.3rem;
+    text-align: center;
+    margin: 2.5rem 0;
+    text-transform: uppercase;
+}
+
 /*HEADER*/
 
 .all-content {
-    background: var(--prymary);
+    background: var(--bg-one);
 }
 
 .all-content #logo {
-    padding: .5rem 2rem ;
+    padding: .5rem 2rem;
 }
 
 .navbar-toggler-icon {
@@ -46,14 +59,20 @@
     box-shadow: inherit;
 }
 
-.nav-item .nav-link {
-    color: var(--ligth);
-    font-size: 1.1rem;
-    margin: 1rem;
+.nav-link {
+    color     : var(--ligth);
+    font-size : 1.1rem;
+    margin    : 1rem;
+    transition: all .5s ease-in-out;
 }
 
-.nav-link:hover{
-    color: var(--white);
+.nav-link.active {
+    text-decoration: underline;
+}
+
+.nav-link:hover {
+    color    : var(--white);
+    transform: translateY(-5px);
 }
 
 .dropdown-menu {
@@ -66,9 +85,121 @@
 
 /*INICIO*/
 
-.home{
-    width: 100%;
-    height: 80vh;
-    background-image: url(../src/img/banner.jpg);
-    background-size: cover;
+.home {
+    width                : 100%;
+    height               : 90vh;
+    background-image     : linear-gradient(rgba(16, 16, 16, 0.432), rgba(16, 16, 16, 0.822)), url(../src/img/banner.jpg);
+    background-size      : cover;
+    background-attachment: fixed;
+    clip-path            : polygon(0 0, 100% 0%, 100% 86%, 50% 100%, 0 86%);
+    display              : flex;
+    justify-content      : center;
+    align-items          : center;
+    flex-wrap            : wrap;
+    position             : relative;
+    z-index              : 0;
 }
+
+.home h2 {
+    color        : var(--ligth);
+    font-weight  : 800;
+    font-size    : 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.home h3 {
+    color        : var(--white);
+    margin-bottom: 1rem;
+}
+
+.home span {
+    color      : var(--white);
+    font-weight: 800;
+}
+
+p {
+    color        : var(--ligth);
+    margin-bottom: 1rem;
+}
+
+.home .img {
+    flex: 1 1 20rem;
+}
+
+.home .img img {
+    width: 100%;
+}
+
+.home .content {
+    flex       : 1 1 20rem;
+    margin-left: 2rem;
+}
+
+.changecontent::after {
+    content    : ' ';
+    color      : var(--ligth);
+    animation  : changetext 10s infinite linear;
+    font-weight: 800;
+}
+
+@keyframes changetext {
+    0% {
+        content: "Bodas";
+    }
+
+    20% {
+        content: "15 años";
+    }
+
+    50% {
+        content: "Bautismos";
+    }
+
+    60% {
+        content: "Cumpleaños";
+    }
+
+    100% {
+        content: "Postres";
+    }
+}
+
+.content .btn {
+    width     : 6rem;
+    height    : 2.2rem;
+    background: var(--ligth);
+    color     : var(--white);
+}
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------------------*/
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width:860px) {
+    .home{
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .content h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .home{
+        height: 100vh;
+    }
+    
+    .content h2{
+        font-size: 1.8rem;
+
+    }
+}
+
