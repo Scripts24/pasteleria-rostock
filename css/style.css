@@ -19,6 +19,10 @@
     --ligth    : #BFA380;
     --white    : #ffffffe0;
     --black    : #0a0a0a;
+
+    --items : 10;
+    --height: clamp(120px, 30vw, 300px);
+    --width : clamp(200px, 40vw, 400px);
 }
 
 body {
@@ -27,27 +31,29 @@ body {
 
 /*Sacar borde y brillo azul de bootstrap*/
 
-input:focus,  input.form-control:focus {
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
+input:focus,
+input.form-control:focus {
+    outline           : none !important;
+    outline-width     : 0 !important;
+    box-shadow        : none;
+    -moz-box-shadow   : none;
     -webkit-box-shadow: none;
 }
 
-textarea:focus, textarea.form-control:focus{
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
+textarea:focus,
+textarea.form-control:focus {
+    outline           : none !important;
+    outline-width     : 0 !important;
+    box-shadow        : none;
+    -moz-box-shadow   : none;
     -webkit-box-shadow: none;
 }
 
-a.btn:focus{
-    outline:none !important;
-    outline-width: 0 !important;
-    box-shadow: none;
-    -moz-box-shadow: none;
+a.btn:focus {
+    outline           : none !important;
+    outline-width     : 0 !important;
+    box-shadow        : none;
+    -moz-box-shadow   : none;
     -webkit-box-shadow: none;
 }
 
@@ -102,7 +108,7 @@ a.btn:focus{
 }
 
 .dropdown-menu {
-    background: var(--prymary);
+    background: var(--bg-one);
 }
 
 .dropdown-item {
@@ -197,6 +203,83 @@ p {
     color     : var(--white);
 }
 
+/*GALERÍA*/
+
+/*Slider*/
+
+/*--items : 10;
+--height: clamp(120px, 30vw, 300px);
+--width : clamp(200px, 40vw, 400px);*/
+
+.slider {
+    position      : relative;
+    height        : 100vh;
+    overflow      : hidden;
+    pointer-events: none;
+    z-index       : 999;
+}
+
+.sliderItem {
+    --x             : calc(var(--active) * 800%);
+    --y             : calc(var(--active) * 200%);
+    --start         : calc(var(--active) * 120deg);
+    --opacity       : calc(var(--zIndex) / var(--items) * 3 - 2);
+    overflow        : hidden;
+    position        : absolute;
+    z-index         : var(--zIndex);
+    width           : var(--width);
+    height          : var(--height);
+    margin          : calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
+    border-radius   : 10px;
+    top             : 50%;
+    left            : 50%;
+    user-select     : none;
+    transform-origin: 0% 100%;
+    pointer-events  : all;
+    transform       : translate(var(--x), var(--y)) rotate(var(--start));
+    transition      : transform 0.9s cubic-bezier(0, 0.02, 0, 1);
+}
+
+.sliderItem .sliderBox {
+    position  : absolute;
+    width     : 100%;
+    height    : 100%;
+    top       : 0;
+    left      : 0;
+    transition: opacity 0.9s cubic-bezier(0, 0.02, 0, 1);
+    /*opacity: var(--opacity);*/
+}
+
+.sliderItem .sliderBox::before {
+    content : "";
+    position: absolute;
+    width   : 100%;
+    height  : 100%;
+    top     : 0;
+    left    : 0;
+}
+
+.sliderItem img {
+    width         : 100%;
+    height        : 100%;
+    object-fit    : cover;
+    pointer-events: none;
+    background    : #000000c5;
+    border        : solid var(--ligth);
+    border-radius : 10px;
+}
+
+.sliderItem .name {
+    position   : absolute;
+    color      : var(--ligth);
+    font-size  : 1.5rem;
+    font-weight: 800;
+    bottom     : 20px;
+    left       : 20px;
+    transition : opacity 0.9s cubic-bezier(0, 0.02, 0, 1);
+    text-shadow: 0 4px 4px #0a0a0a;
+}
+
 
 /*NOSOTROS*/
 
@@ -208,73 +291,79 @@ p {
     border: .2rem solid var(--ligth);
 }
 
-#contain p{
+#contain p {
     margin-top: 3rem;
 }
 
-.masters h3{
-    color: var(--ligth);
+.masters h3 {
+    color     : var(--ligth);
     text-align: center;
-    margin: 3rem 0;
+    margin    : 3rem 0;
 }
 
 
 /*CONTACTO*/
 
-.contact{
+.contact {
     margin-bottom: 3rem;
 }
 
-form{
+form {
     background-image: url(../src/img/banner2.jpg);
-    background-size: cover;
-    padding: 3rem;
+    background-size : cover;
+    padding         : 3rem;
 }
 
-#contacts input{
-    background: var(--black);
-    color: var(--ligth);
-    border-color: var(--ligth);
+#contacts input {
+    background   : var(--black);
+    color        : var(--ligth);
+    border-color : var(--ligth);
     margin-bottom: .5rem;
 }
 
-#contacts input::placeholder{
+#contacts input::placeholder {
     font-size: .7rem;
 }
 
-#contacts textarea{
-    background: var(--black);
-    color: var(--ligth);
-    border-color: var(--ligth);
+#contacts textarea {
+    background   : var(--black);
+    color        : var(--ligth);
+    border-color : var(--ligth);
     margin-bottom: .5rem;
 }
 
-#contacts textarea::placeholder{
+#contacts textarea::placeholder {
     font-size: .7rem;
 }
 
-#message-btn{
+#message-btn {
     text-align: center;
 }
 
-#message-btn button{
-width: 10rem;
-height: 2rem;
-font-size: .9rem;
-letter-spacing: 3px;
-border-radius: .3rem;
-background: var(--black);
-color: var(--ligth);
-transition: all .5s ease-in-out;
+#message-btn button {
+    width         : 10rem;
+    height        : 2rem;
+    font-size     : .9rem;
+    letter-spacing: 3px;
+    border-radius : .3rem;
+    background    : var(--black);
+    color         : var(--ligth);
+    transition    : all .5s ease-in-out;
 }
 
-#message-btn button:hover{
+#message-btn button:hover {
     background: var(--ligth);
-    color: var(--black);
+    color     : var(--black);
 }
 
 
 /*FOOTER*/
+
+footer {
+    background: var(--bg-one);
+    width     : 100%;
+    height    : 10rem;
+}
 
 
 
@@ -286,6 +375,13 @@ transition: all .5s ease-in-out;
 /*-------------------------------------------------------------------------------------------------*/
 
 /*MEDIA QUERIES*/
+
+@media screen and (max-width:940px) {
+    .slider {
+        height: 70vh;
+    }
+}
+
 
 @media screen and (max-width:860px) {
     .home {
@@ -299,6 +395,12 @@ transition: all .5s ease-in-out;
     }
 }
 
+@media screen and (max-width:700px) {
+    .slider {
+        height: 60vh;
+    }
+}
+
 @media screen and (max-width:560px) {
     .home {
         height: 100vh;
@@ -306,6 +408,18 @@ transition: all .5s ease-in-out;
 
     .content h2 {
         font-size: 1.8rem;
-
     }
+
+    .slider {
+        height: 50vh;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+
+    .slider {
+        height: 45vh;
+    }
+
 }
