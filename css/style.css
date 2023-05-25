@@ -25,11 +25,11 @@ body {
     background-image: url(../src/img/banner3.jpg);
 }
 
-.heading{
-    color: var(--ligth);
-    font-size: 2.3rem;
-    text-align: center;
-    margin: 2.5rem 0;
+.heading {
+    color         : var(--ligth);
+    font-size     : 2.3rem;
+    text-align    : center;
+    margin        : 2.5rem 0;
     text-transform: uppercase;
 }
 
@@ -172,6 +172,26 @@ p {
 }
 
 
+/*NOSOTROS*/
+
+#contain {
+    margin-top: 3rem;
+}
+
+#contain .card img {
+    border: .2rem solid var(--ligth);
+}
+
+#contain p{
+    margin-top: 3rem;
+}
+
+.masters h3{
+    color: var(--ligth);
+    text-align: center;
+    margin: 3rem 0;
+}
+
 
 
 
@@ -181,25 +201,24 @@ p {
 /*MEDIA QUERIES*/
 
 @media screen and (max-width:860px) {
-    .home{
+    .home {
         height: 120vh;
     }
 }
 
 @media screen and (max-width:800px) {
-    .content h2{
+    .content h2 {
         font-size: 2rem;
     }
 }
 
 @media screen and (max-width:560px) {
-    .home{
+    .home {
         height: 100vh;
     }
-    
-    .content h2{
+
+    .content h2 {
         font-size: 1.8rem;
 
     }
 }
-
