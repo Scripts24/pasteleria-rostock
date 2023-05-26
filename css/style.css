@@ -25,6 +25,10 @@
     --width : clamp(200px, 40vw, 400px);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-image: url(../src/img/banner3.jpg);
 }
@@ -57,12 +61,33 @@ a.btn:focus {
     -webkit-box-shadow: none;
 }
 
+/*Encabezados*/
+
 .heading {
     color         : var(--ligth);
     font-size     : 2.3rem;
     text-align    : center;
     margin        : 2.5rem 0;
     text-transform: uppercase;
+}
+
+/*Ir al top*/
+
+.arrow {
+    position     : fixed;
+    background   : var(--ligth);
+    border-radius: 50%;
+    height       : 2.4rem;
+    bottom       : 20rem;
+    right        : 5%;
+    text-align   : center;
+    line-height  : 2.4rem;
+    z-index      : 1000;
+    transition   : .5s;
+}
+
+.arrow:hover {
+    background: var(--white);
 }
 
 /*HEADER*/
@@ -247,7 +272,7 @@ p {
     top       : 0;
     left      : 0;
     transition: opacity 0.9s cubic-bezier(0, 0.02, 0, 1);
-    /*opacity: var(--opacity);*/
+    /*opacity : var(--opacity);*/
 }
 
 .sliderItem .sliderBox::before {
@@ -295,32 +320,30 @@ p {
     margin-top: 3rem;
 }
 
-.masters{
-    margin-bottom: 4rem;
+.masters {
+    margin: 4rem 0;
 }
 
 .masters h2 {
     color     : var(--ligth);
     text-align: center;
-    margin    : 3rem 0;
+    margin    : 2rem 0;
 }
 
 .masters .card {
     background: var(--black);
-    color: var(--ligth);
+    color     : var(--ligth);
 }
 
-.masters .card .share i{
-    font-size: 1.5rem;
+.masters .card .share i {
+    font-size : 1.5rem;
+    transition: .5s;
 }
 
-.masters .card .share i:hover{
-   cursor: pointer;
-   color: var(--white);
+.masters .card .share i:hover {
+    cursor: pointer;
+    color : var(--white);
 }
-
-
-
 
 
 /*CONTACTO*/
@@ -383,9 +406,33 @@ form {
 footer {
     background: var(--bg-one);
     width     : 100%;
-    height    : 10rem;
+    padding   : 2rem 0;
 }
 
+footer h5 {
+    color     : var(--ligth);
+    margin-top: .5rem;
+}
+
+footer .icons i {
+    font-size    : 1.5rem;
+    color        : var(--ligth);
+    margin-bottom: .7rem;
+    margin-left  : .5rem;
+    transition   : .5s;
+}
+
+footer .icons i:hover {
+    color : var(--white);
+    cursor: pointer;
+}
+
+.developed {
+    width        : 18rem;
+    height       : 4rem;
+    border-radius: .3rem;
+    border       : solid var(--ligth);
+}
 
 
 
