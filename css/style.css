@@ -243,6 +243,23 @@ p {
     color     : var(--white);
 }
 
+/*PRODUCTOS*/
+
+.category .card{
+    background: var(--black);
+    color: var(--ligth);
+}
+
+.category .card-body a{
+    text-decoration: none;
+    color: var(--black);
+    background: var(--ligth);
+    padding: .3rem;
+    
+}
+
+
+
 /*GALERÍA*/
 
 /*Slider*/
