@@ -31,7 +31,7 @@ function cargar_productos(productos_elegidos) {
                     <div class="card-body">
                         <h5 class="text-center py-3">${producto.titulo}</h5>
                         <div class="text-center">
-                            <a href="https://api.whatsapp.com/send?phone=114779865&text=Hola%21%20Quisiera%20saber%20 el precio de torta de %20${producto.titulo}" target="_blank">Consultar</a>
+                            <a href="https://api.whatsapp.com/send?&text=Hola%21%20Quisiera%20saber%20 el precio de torta de %20${producto.titulo}" target="_blank">Consultar</a>
                         </div>
                     </div>
                 </div>

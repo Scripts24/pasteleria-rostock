@@ -26,7 +26,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior   : smooth;
     overflow-x        : hidden;
     scroll-padding-top: 9rem;
 }
@@ -50,86 +50,96 @@ body {
 
 /*Preloader*/
 
-.centrado{
-    height: 100vh;
+.centrado {
+    height          : 100vh;
     background-color: var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hidden{
-   overflow: hidden;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
 }
 
 .lds-grid {
-    display: inline-block;
+    display : inline-block;
     position: relative;
-    width: 80px;
-    height: 80px;
-  }
-  .lds-grid div {
-    position: absolute;
-    width: 16px;
-    height: 16px;
+    width   : 80px;
+    height  : 80px;
+}
+
+.lds-grid div {
+    position     : absolute;
+    width        : 16px;
+    height       : 16px;
     border-radius: 50%;
-    background: #fcf;
-    animation: lds-grid 1.2s linear infinite;
-  }
-  .lds-grid div:nth-child(1) {
-    top: 8px;
-    left: 8px;
+    background   : #fcf;
+    animation    : lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+    top            : 8px;
+    left           : 8px;
     animation-delay: 0s;
-  }
-  .lds-grid div:nth-child(2) {
-    top: 8px;
-    left: 32px;
+}
+
+.lds-grid div:nth-child(2) {
+    top            : 8px;
+    left           : 32px;
     animation-delay: -0.4s;
-  }
-  .lds-grid div:nth-child(3) {
-    top: 8px;
-    left: 56px;
+}
+
+.lds-grid div:nth-child(3) {
+    top            : 8px;
+    left           : 56px;
     animation-delay: -0.8s;
-  }
-  .lds-grid div:nth-child(4) {
-    top: 32px;
-    left: 8px;
+}
+
+.lds-grid div:nth-child(4) {
+    top            : 32px;
+    left           : 8px;
     animation-delay: -0.4s;
-  }
-  .lds-grid div:nth-child(5) {
-    top: 32px;
-    left: 32px;
+}
+
+.lds-grid div:nth-child(5) {
+    top            : 32px;
+    left           : 32px;
     animation-delay: -0.8s;
-  }
-  .lds-grid div:nth-child(6) {
-    top: 32px;
-    left: 56px;
+}
+
+.lds-grid div:nth-child(6) {
+    top            : 32px;
+    left           : 56px;
     animation-delay: -1.2s;
-  }
-  .lds-grid div:nth-child(7) {
-    top: 56px;
-    left: 8px;
+}
+
+.lds-grid div:nth-child(7) {
+    top            : 56px;
+    left           : 8px;
     animation-delay: -0.8s;
-  }
-  .lds-grid div:nth-child(8) {
-    top: 56px;
-    left: 32px;
+}
+
+.lds-grid div:nth-child(8) {
+    top            : 56px;
+    left           : 32px;
     animation-delay: -1.2s;
-  }
-  .lds-grid div:nth-child(9) {
-    top: 56px;
-    left: 56px;
+}
+
+.lds-grid div:nth-child(9) {
+    top            : 56px;
+    left           : 56px;
     animation-delay: -1.6s;
-  }
-  @keyframes lds-grid {
-    0%, 100% {
-      opacity: 1;
+}
+
+@keyframes lds-grid {
+
+    0%,
+    100% {
+        opacity: 1;
     }
+
     50% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
-  }
-  
+}
+
 
 /*Sacar borde y brillo azul de bootstrap*/
 
@@ -171,23 +181,34 @@ a.btn:focus {
     text-transform: uppercase;
 }
 
-/*Ir al top*/
+/*Top*/
 
-.arrow {
-    position     : fixed;
-    background   : var(--ligth);
-    border-radius: 50%;
-    height       : 2.4rem;
-    bottom       : 20rem;
-    right        : 5%;
-    text-align   : center;
-    line-height  : 2.4rem;
-    z-index      : 1000;
-    transition   : .5s;
+.top {
+    display: none;
 }
 
-.arrow:hover {
-    background: var(--white);
+.bi-arrow-up-circle {
+    color        : var(--ligth);
+    font-size    : 2.5rem;
+    background   : var(--white);
+    text-align   : center;
+    right        : 3%;
+    padding      : 1px;
+    border-radius: 50%;
+    width        : 2.5rem;
+    height       : 2.5rem;
+    line-height  : 1;
+    position     : fixed;
+    bottom       : 20rem;
+    transition   : all .5s ease;
+    animation    : upload 3s infinite alternate;
+    cursor       : pointer;
+    z-index      : 1000;
+}
+
+.bi-arrow-up-circle:hover {
+    background: var(--ligth);
+    color     : var(--white);
 }
 
 /*HEADER*/
@@ -330,17 +351,17 @@ p {
 
 /*PRODUCTOS*/
 
-.category .card{
+.category .card {
     background: var(--black);
-    color: var(--ligth);
+    color     : var(--ligth);
 }
 
-.category .card-body a{
+.category .card-body a {
     text-decoration: none;
-    color: var(--black);
-    background: var(--ligth);
-    padding: .3rem;
-    
+    color          : var(--black);
+    background     : var(--ligth);
+    padding        : .3rem;
+
 }
 
 

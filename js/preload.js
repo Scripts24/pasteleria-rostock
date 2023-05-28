@@ -1,7 +1,6 @@
-window.onload = function(){
-    
-    $('#preload').fadeOut()
-    $('body').removeClass('hidden')
 
-   
+let preload = document.getElementById('preload')
+
+function myFunction(){
+    preload.style.display = 'none'
 }
