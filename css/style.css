@@ -27,7 +27,7 @@
 
 html {
     scroll-behavior   : smooth;
-    overflow-x        : hidden;
+    overflow-x: hidden;
     scroll-padding-top: 9rem;
 }
 
@@ -191,7 +191,7 @@ a.btn:focus {
     font-size    : 2.5rem;
     background   : var(--white);
     text-align   : center;
-    left        : 3%;
+    left         : 3%;
     padding      : 1px;
     border-radius: 50%;
     width        : 2.5rem;

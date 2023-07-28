@@ -8,6 +8,8 @@ function myFunction(){
 // Botón whatsapp
 
 window.addEventListener('load', function () {
+
+    
     // Obtiene el contenedor del botón de WhatsApp
     let whatsappContainer = document.getElementById('button-w');
 
