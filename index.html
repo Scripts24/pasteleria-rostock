@@ -8,8 +8,7 @@
     <title>Pastelería Rostock</title>
     <!--Favicon-->
     <link rel="shortcut icon" href="./src/img/favicon.ico" type="image/x-icon">
-    <!--PROTOCOLO OPEN GRAPH-->
-    <!--Image-->
+    <!--Url Favicon-->
     <meta property="og:image"
         content="https://d1ujqdpfgkvqfi.cloudfront.net/favicon-generator/htdocs/favicons/2023-05-25/dc3e0d99dab42a5ab7e375573b115d1c.ico.png">
     <!-- Estilos plugin whatsapp -->
@@ -68,7 +67,8 @@
                                 <li><a class="dropdown-item boton-categoria" id="eventos" href="#category">Otros
                                         eventos</a>
                                 </li>
-                                <li><a class="dropdown-item boton-categoria" id="cumples" href="#category">Cumpleaños</a>
+                                <li><a class="dropdown-item boton-categoria" id="cumples"
+                                        href="#category">Cumpleaños</a>
                                 </li>
                                 <li><a class="dropdown-item boton-categoria" id="postres" href="#category">Postres</a>
                                 </li>
@@ -122,66 +122,16 @@
         <!--Inicio Sección Galería-->
         <section class="gallery" id="gallery">
             <h2 class="heading">Galería</h2>
-            <div class="slider">
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-1</div>
-                        <img src="./src/img/slider/s1.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-2</div>
-                        <img src="./src/img/slider/s2.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-3</div>
-                        <img src="./src/img/slider/s3.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-4</div>
-                        <img src="./src/img/slider/s4.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-5</div>
-                        <img src="./src/img/slider/s5.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-6</div>
-                        <img src="./src/img/slider/s6.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-7</div>
-                        <img src="./src/img/slider/s7.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-8</div>
-                        <img src="./src/img/slider/s8.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-9</div>
-                        <img src="./src/img/slider/s9.png">
-                    </div>
-                </div>
-                <div class="sliderItem">
-                    <div class="sliderBox">
-                        <div class="name">Item-10</div>
-                        <img src="./src/img/slider/s10.png">
-                    </div>
+            <div class="wrapper-img">
+                <div class="container-img">
+                    <div style="--v: 1;"> <img src="./src/img/slider/s1.jpg"></div>
+                    <div style="--v: 2;"> <img src="./src/img/slider/s2.jpg"></div>
+                    <div style="--v: 3;"> <img src="./src/img/slider/s3.jpg"></div>
+                    <div style="--v: 4;"> <img src="./src/img/slider/s4.jpg"></div>
+                    <div style="--v: 5;"> <img src="./src/img/slider/s5.jpg"></div>
+                    <div style="--v: 6;"> <img src="./src/img/slider/s6.jpg"></div>
+                    <div style="--v: 7;"> <img src="./src/img/slider/s7.jpg"></div>
+                    <div style="--v: 8;"> <img src="./src/img/slider/s8.jpg"></div>
                 </div>
             </div>
         </section>
@@ -332,12 +282,12 @@
                 <i class="fa fa-play"></i>
             </div>
             <div class="wcs_popup_avatar">
-                <img src="https://avatars.githubusercontent.com/janl?s=180" alt="">
+                <img src="https://avatars.githubusercontent.com/janl?s=180">
             </div>
         </div>
     </div>
-
-
+    <!--Slider 3D con rotación imágenes-->
+    <script src="./js/slider.js"></script>
     <!-- jQuery 1.8+ -->
     <script src="plugin/components/jQuery/jquery-1.11.3.min.js"></script>
     <!-- Plugin JS file -->
@@ -349,7 +299,6 @@
             defaultMsg: '',
         });
     </script>
-
     <!--Preloader-->
     <script src="./js/preload.js"></script>
     <!--Bootstrap-->
@@ -361,11 +310,9 @@
         crossorigin="anonymous"></script>
     <!--Productos-->
     <script src="./js/products.js"></script>
-    <!--Slider-->
-    <script src="./js/slider.js"></script>
     <!--Top-->
     <script src="./js/upload.js"></script>
-
+    <!--Revealpersonalizado-->
     <script src="./js/myReveal.js"></script>
 </body>
 

@@ -27,7 +27,7 @@
 
 html {
     scroll-behavior   : smooth;
-    overflow-x: hidden;
+    overflow-x        : hidden;
     scroll-padding-top: 9rem;
 }
 
@@ -363,90 +363,73 @@ p {
 }
 
 
-
 /*GALERÍA*/
 
-/*Slider*/
-
-/*--items : 10;
---height: clamp(120px, 30vw, 300px);
---width : clamp(200px, 40vw, 400px);*/
-
-.slider {
-    position      : relative;
-    height        : 100vh;
-    overflow      : hidden;
-    pointer-events: none;
-    z-index       : 999;
+.gallery {
+    min-height: 90vh;
 }
 
-.sliderItem {
-    --x             : calc(var(--active) * 800%);
-    --y             : calc(var(--active) * 200%);
-    --start         : calc(var(--active) * 120deg);
-    --opacity       : calc(var(--zIndex) / var(--items) * 3 - 2);
-    overflow        : hidden;
-    position        : absolute;
-    z-index         : var(--zIndex);
-    width           : var(--width);
-    height          : var(--height);
-    margin          : calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
-    border-radius   : 10px;
-    top             : 50%;
-    left            : 50%;
-    user-select     : none;
-    transform-origin: 0% 100%;
-    pointer-events  : all;
-    transform       : translate(var(--x), var(--y)) rotate(var(--start));
-    transition      : transform 0.9s cubic-bezier(0, 0.02, 0, 1);
+.wrapper-img {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    padding-top    : 3rem;
 }
 
-.sliderItem .sliderBox {
+.container-img {
+    position       : relative;
+    height         : 300px;
+    width          : 200px;
+    transform-style: preserve-3d;
+    animation      : animate 22s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1500px) rotateY(0deg);
+    }
+
+    100% {
+        transform: perspective(1500px) rotateY(360deg);
+    }
+}
+
+.container-img div {
+    position           : absolute;
+    top                : 0;
+    left               : 0;
+    height             : 100%;
+    width              : 100%;
+    transform-style    : preserve-3d;
+    transform-origin   : center;
+    transform          : rotateY(calc(var(--v) * 45deg)) translateZ(300px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004);
+}
+
+.container-img div img {
     position  : absolute;
-    width     : 100%;
     height    : 100%;
-    top       : 0;
-    left      : 0;
-    transition: opacity 0.9s cubic-bezier(0, 0.02, 0, 1);
-    /*opacity : var(--opacity);*/
+    width     : 100%;
+    object-fit: cover;
+    cursor    : pointer;
 }
 
-.sliderItem .sliderBox::before {
-    content : "";
-    position: absolute;
-    width   : 100%;
-    height  : 100%;
-    top     : 0;
-    left    : 0;
+.spin {
+    animation: spin 2s linear infinite;
 }
 
-.sliderItem img {
-    width         : 100%;
-    height        : 100%;
-    object-fit    : cover;
-    pointer-events: none;
-    background    : #000000c5;
-    border        : solid var(--ligth);
-    border-radius : 10px;
-}
+@keyframes spin {
+    0% {
+        transform: perspective(1500px) rotateY(0deg);
 
-.sliderItem .name {
-    position   : absolute;
-    color      : var(--ligth);
-    font-size  : 1.5rem;
-    font-weight: 800;
-    bottom     : 20px;
-    left       : 20px;
-    transition : opacity 0.9s cubic-bezier(0, 0.02, 0, 1);
-    text-shadow: 0 4px 4px #0a0a0a;
-}
+    }
 
+    100% {
+        transform: perspective(1500px) rotateY(360deg);
+    }
+}
 
 /*NOSOTROS*/
-
-#contain {
-    margin-top: 3rem;
-}
 
 #contain .card img {
     border: .2rem solid var(--ligth);
@@ -570,22 +553,15 @@ footer .icons i:hover {
     border       : solid var(--ligth);
 }
 
-
-
-
-
-
-
 /*-------------------------------------------------------------------------------------------------*/
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width:940px) {
-    .slider {
-        height: 70vh;
+@media screen and (max-width:950px) {
+    .gallery {
+        min-height: 70vh;
     }
 }
-
 
 @media screen and (max-width:860px) {
     .home {
@@ -600,8 +576,8 @@ footer .icons i:hover {
 }
 
 @media screen and (max-width:700px) {
-    .slider {
-        height: 60vh;
+    .gallery {
+        min-height: 60vh;
     }
 }
 
@@ -614,16 +590,5 @@ footer .icons i:hover {
         font-size: 1.8rem;
     }
 
-    .slider {
-        height: 50vh;
-    }
-
 }
 
-@media screen and (max-width:400px) {
-
-    .slider {
-        height: 45vh;
-    }
-
-}
