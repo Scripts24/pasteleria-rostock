@@ -19,10 +19,6 @@
     --ligth    : #BFA380;
     --white    : #ffffffe0;
     --black    : #0a0a0a;
-
-    --items : 10;
-    --height: clamp(120px, 30vw, 300px);
-    --width : clamp(200px, 40vw, 400px);
 }
 
 html {
