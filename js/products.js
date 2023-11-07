@@ -20,11 +20,8 @@ function cargar_productos(productos_elegidos) {
     contenedor_productos.innerHTML = "";/*---Vaciar el contenedor_productos antes de realizar el forEach del array, sino c/ vez que cliqueemos los productos se duplican--- */
 
     productos_elegidos.forEach(producto => {
-        const div = document.createElement("div");/*---Creamos un div con la class producto--- */
-        div.classList.add("col-12");
-        div.classList.add("col-md-6");
-        div.classList.add("col-lg-4");
-        div.classList.add("py-3");
+        const div = document.createElement("div");
+        div.classList.add("col-12", "col-md-6", "col-lg-4", "py-3");
         div.innerHTML = `
                 <div class="card h-100">
                     <img class="card-img-top" style="height:12rem"  src="${producto.imagen}" alt="${producto.titulo}">
