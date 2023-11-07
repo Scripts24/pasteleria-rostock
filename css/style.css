@@ -41,7 +41,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 body {
-    background-image: url(../src/img/banner3.jpg);
+    background-image: url(../img/banner3.jpg);
 }
 
 /*Preloader*/
@@ -261,7 +261,7 @@ a.btn:focus {
 .home {
     width                : 100%;
     height               : 90vh;
-    background-image     : linear-gradient(rgba(16, 16, 16, 0.432), rgba(16, 16, 16, 0.822)), url(../src/img/banner.jpg);
+    background-image     : linear-gradient(rgba(16, 16, 16, 0.432), rgba(16, 16, 16, 0.822)), url(../img/banner.jpg);
     background-size      : cover;
     background-attachment: fixed;
     clip-path            : polygon(0 0, 100% 0%, 100% 86%, 50% 100%, 0 86%);
@@ -468,7 +468,7 @@ p {
 }
 
 form {
-    background-image: url(../src/img/banner2.jpg);
+    background-image: url(../img/banner2.jpg);
     background-size : cover;
     padding         : 3rem;
 }
